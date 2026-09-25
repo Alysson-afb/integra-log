@@ -1,0 +1,911 @@
+/* ==========================================================
+   Integra-Log - Estilos Gerais e Variáveis
+   ========================================================== */
+
+:root {
+    --azul-escuro: #101c46;
+    --azul-claro: #35aee8;
+    --azul-acao: #1d6ef2;
+    --fundo: #f4f5f7;
+    --branco: #ffffff;
+    --texto: #1f2937;
+    --texto-fraco: #6b7280;
+    --borda: #e5e7eb;
+    --amarelo: #fbbf24;
+    --vermelho: #dc2626;
+    --verde: #16a34a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: var(--azul-acao);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   Barra do Topo e Identidade
+   ========================================================== */
+
+.topo {
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.botao-menu {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--fundo);
+    font-size: 18px;
+    color: var(--azul-escuro);
+    cursor: pointer;
+}
+
+.botao-menu:hover {
+    background-color: var(--borda);
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.marca img {
+    height: 34px;
+}
+
+.marca-nome {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--azul-escuro);
+    line-height: 1;
+}
+
+.marca-nome span {
+    color: var(--azul-claro);
+}
+
+.marca-descricao {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--texto-fraco);
+    text-transform: uppercase;
+}
+
+.topo-direita {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.usuario-logado {
+    color: var(--texto-fraco);
+}
+
+.usuario-logado strong {
+    color: var(--azul-escuro);
+}
+
+.separador {
+    width: 1px;
+    height: 26px;
+    background-color: var(--borda);
+}
+
+
+/* ==========================================================
+   Botões Globais
+   ========================================================== */
+
+.botao {
+    display: inline-block;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--azul-acao);
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: var(--azul-escuro);
+    text-decoration: none;
+}
+
+.botao-sair {
+    color: var(--vermelho);
+    font-weight: bold;
+}
+
+.botao-claro {
+    background-color: var(--branco);
+    color: var(--azul-escuro);
+    border: 1px solid var(--borda);
+}
+
+.botao-claro:hover {
+    background-color: var(--fundo);
+    color: var(--azul-escuro);
+}
+
+
+/* ==========================================================
+   Menu Lateral (Tema Escuro com Card no Logo)
+   ========================================================== */
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background-color: var(--azul-escuro);
+    padding: 24px 0;
+    transition: left 0.25s ease;
+    z-index: 20;
+    overflow-y: auto;
+}
+
+.menu-lateral.aberto {
+    left: 0;
+}
+
+/* Card branco para destacar o logo original sobre o fundo escuro */
+.menu-lateral img {
+    width: 140px;
+    display: block;
+    margin: 0 auto 24px auto;
+    background-color: var(--branco);
+    padding: 10px 14px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.menu-lateral .grupo {
+    color: var(--azul-claro);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 16px 24px 6px 24px;
+}
+
+.menu-lateral a {
+    display: block;
+    padding: 10px 24px;
+    color: #d7dbe6;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.menu-lateral a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--branco);
+    text-decoration: none;
+}
+
+
+/* ==========================================================
+   Estrutura de Conteúdo
+   ========================================================== */
+
+.conteudo {
+    padding: 20px;
+}
+
+.titulo-pagina {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    color: var(--azul-escuro);
+}
+
+.cartao {
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+
+/* ==========================================================
+   Barra de Filtros e Seletor de Meses
+   ========================================================== */
+
+.barra-filtros {
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    padding: 14px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.seletor-mes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--fundo);
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    padding: 8px 18px;
+    min-width: 250px;
+    box-sizing: border-box;
+}
+
+.seletor-mes .texto-mes {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--texto);
+}
+
+.seletor-mes a.seta-mes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--texto-fraco);
+    text-decoration: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.seletor-mes a.seta-mes:hover {
+    background-color: var(--branco);
+    color: var(--azul-acao);
+}
+
+.campo-busca,
+.campo-filtro {
+    padding: 12px 18px;
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    background-color: var(--fundo);
+    font-size: 14px;
+    color: var(--texto);
+}
+
+.campo-busca {
+    flex: 1;
+    min-width: 220px;
+}
+
+.campo-busca:focus,
+.campo-filtro:focus {
+    outline: none;
+    border-color: var(--azul-claro);
+    background-color: var(--branco);
+}
+
+
+/* ==========================================================
+   Chips de Status e Resumo
+   ========================================================== */
+
+.lista-chips {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.chip {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 18px;
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    background-color: var(--branco);
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--texto);
+}
+
+.chip:hover {
+    border-color: var(--azul-claro);
+    text-decoration: none;
+    color: var(--texto);
+}
+
+.chip .chip-nome {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--texto-fraco);
+}
+
+.chip .chip-valor {
+    font-weight: bold;
+}
+
+.chip.ativo {
+    background-color: var(--azul-escuro);
+    border-color: var(--azul-escuro);
+    color: var(--branco);
+}
+
+.chip.ativo .chip-nome {
+    color: var(--azul-claro);
+}
+
+
+/* ==========================================================
+   Lista de Guias (Grade com Alinhamento Fixo)
+   ========================================================== */
+
+.lista-guias {
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.linha-guia {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.linha-guia:last-child {
+    border-bottom: none;
+}
+
+.linha-guia:hover {
+    background-color: #fafbfc;
+}
+
+.guia-numero {
+    width: 95px;
+    flex-shrink: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--azul-acao);
+}
+
+.guia-destino {
+    flex: 1;
+    min-width: 160px;
+}
+
+.guia-motorista {
+    width: 120px;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.guia-data {
+    width: 140px;
+    flex-shrink: 0;
+    color: var(--texto-fraco);
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.guia-valores {
+    width: 150px;
+    flex-shrink: 0;
+    text-align: right;
+}
+
+.guia-valores .peso-valor {
+    margin-top: 4px;
+}
+
+.guia-valores .peso-valor strong {
+    color: var(--azul-escuro);
+}
+
+.guia-botoes-status {
+    width: 116px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guia-status {
+    width: 120px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.guia-acoes {
+    width: 70px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+
+/* ==========================================================
+   Controles Rápidos de Status e Ações
+   ========================================================== */
+
+.btn-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 36px;
+    text-decoration: none;
+    background-color: var(--branco);
+    transition: all 0.2s ease;
+}
+
+.btn-status img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* 1. Coletada */
+.btn-status-coletada {
+    border: 1.5px solid #00c0f3;
+    border-right: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    color: #00c0f3;
+}
+.btn-status-coletada:hover {
+    background-color: #f0fafd;
+}
+.btn-status-coletada.ativo {
+    background-color: #00c0f3;
+    color: var(--branco);
+}
+
+/* 2. Transferência */
+.btn-status-transferencia {
+    border: 1.5px solid #5b8df8;
+    color: #5b8df8;
+}
+.btn-status-transferencia:hover {
+    background-color: #f0f5ff;
+}
+.btn-status-transferencia.ativo {
+    background-color: #5b8df8;
+    color: var(--branco);
+}
+
+/* 3. Rota */
+.btn-status-rota {
+    border: 1.5px solid #ffaa00;
+    border-left: none;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: #ffaa00;
+}
+.btn-status-rota:hover {
+    background-color: #fffdf0;
+}
+.btn-status-rota.ativo {
+    background-color: #ffaa00;
+    color: var(--branco);
+}
+
+.btn-status.ativo img {
+    filter: brightness(0) invert(1);
+}
+
+.acao-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 6px;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.acao-icone:hover {
+    background-color: var(--fundo);
+    transform: scale(1.1);
+}
+
+.selo {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    background-color: #e5e7eb;
+    color: #374151;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.selo-permanente {
+    background-color: #374151;
+    color: #ffffff;
+}
+
+.situacao {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: var(--fundo);
+    color: var(--texto-fraco);
+}
+
+.situacao-1 { background-color: #fef3c7; color: #92400e; }  /* Coletada */
+.situacao-2 { background-color: #e0e7ff; color: #3730a3; }  /* Transferência */
+.situacao-3 { background-color: #fed7aa; color: #9a3412; }  /* Rota */
+.situacao-4 { background-color: #dcfce7; color: #166534; }  /* Entregue */
+.situacao-5 { background-color: #fee2e2; color: #991b1b; }  /* Divergente */
+
+.aviso-vazio {
+    padding: 30px;
+    text-align: center;
+    color: var(--texto-fraco);
+}
+
+
+/* ==========================================================
+   Tabelas de Apoio
+   ========================================================== */
+
+.tabela {
+    width: 100%;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+.tabela th {
+    background-color: #fafbfc;
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--texto-fraco);
+    border-bottom: 1px solid var(--borda);
+}
+
+.tabela td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.tabela tr:last-child td {
+    border-bottom: none;
+}
+
+.tabela tbody tr:hover {
+    background-color: #fafbfc;
+}
+
+
+/* ==========================================================
+   Formulários
+   ========================================================== */
+
+.formulario {
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 24px;
+    max-width: 620px;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: var(--azul-escuro);
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"],
+.formulario input[type="number"],
+.formulario input[type="date"],
+.formulario select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.formulario input:focus,
+.formulario select:focus {
+    outline: none;
+    border-color: var(--azul-claro);
+}
+
+.formulario input[readonly] {
+    background-color: var(--fundo);
+    color: var(--texto-fraco);
+}
+
+.grupo-opcoes {
+    margin-bottom: 16px;
+}
+
+.grupo-opcoes label {
+    display: inline-block;
+    margin-right: 16px;
+    font-weight: normal;
+    color: var(--texto);
+}
+
+.grupo-opcoes input {
+    margin-right: 4px;
+}
+
+.botao-cancelar {
+    background-color: var(--vermelho);
+}
+
+.botao-cancelar:hover {
+    background-color: #b91c1c;
+}
+
+
+/* ==========================================================
+   Mensagens de Notificação
+   ========================================================== */
+
+.mensagem {
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.mensagem-erro {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+
+/* ==========================================================
+   Tela de Autenticação (Login)
+   ========================================================== */
+
+.tela-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--azul-escuro);
+}
+
+.caixa-login {
+    background-color: var(--branco);
+    border-radius: 16px;
+    padding: 40px;
+    width: 380px;
+}
+
+.caixa-login img {
+    width: 190px;
+    display: block;
+    margin: 0 auto 28px auto;
+}
+
+.caixa-login .botao {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.caixa-login .formulario {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    max-width: none;
+}
+
+.lembrar-email {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    font-weight: normal;
+    color: var(--texto-fraco);
+}
+
+.lembrar-email input {
+    width: auto;
+    margin: 0;
+}
+
+/* ==========================================================
+   Ajustes para Celulares e Tablets (Telas até 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+    /* Topo mais limpo e sem aperto */
+    .topo {
+        padding: 10px 14px;
+        gap: 10px;
+    }
+
+    .marca-descricao,
+    .usuario-logado,
+    .separador {
+        display: none; /* Oculta textos secundários no topo mobile */
+    }
+
+    .topo-direita .botao {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* Transforma a linha de guias em um Card vertical moderno */
+    .linha-guia {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 14px;
+    }
+
+    .guia-numero,
+    .guia-destino,
+    .guia-motorista,
+    .guia-data,
+    .guia-valores,
+    .guia-status,
+    .guia-botoes-status,
+    .guia-acoes {
+        width: 100% !important;
+        text-align: left !important;
+    }
+
+    .guia-valores {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .guia-acoes {
+        justify-content: flex-start;
+        border-top: 1px solid var(--borda);
+        padding-top: 8px;
+    }
+
+    /* Ajuste da tela de Login para caber em telas estreitas */
+    .caixa-login {
+        width: 90%;
+        max-width: 380px;
+        padding: 24px;
+    }
+
+    /* Rolagem suave nas tabelas clássicas */
+    .tabela {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* ==========================================================
+   Portal do Motorista (Mobile-First)
+   ========================================================== */
+.motorista-container {
+    padding-bottom: 80px; /* Cria espaço para a barra de rodapé não sobrepor o conteúdo */
+}
+
+.motorista-busca {
+    margin-bottom: 16px;
+}
+
+.motorista-busca input {
+    width: 100%;
+    padding: 14px 18px;
+    border-radius: 24px;
+    border: 1px solid var(--borda);
+    font-size: 16px; /* 16px evita que o iOS faça zoom automático no input */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.card-guia {
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.card-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--fundo);
+    padding-bottom: 10px;
+}
+
+.card-topo .numero-guia {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--azul-escuro);
+}
+
+.card-corpo p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: var(--texto);
+}
+
+.card-acao {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.btn-largo {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Barra de Navegação Inferior (App-like) */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--branco);
+    border-top: 1px solid var(--borda);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom)); /* Suporte para a barra do iPhone */
+    z-index: 100;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-tab {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--texto-fraco);
+    font-size: 11px;
+    font-weight: bold;
+    gap: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.nav-tab.ativo {
+    color: var(--azul-acao);
+}
+
+}
